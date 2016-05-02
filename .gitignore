@@ -1,0 +1,6 @@
+apache/
+composer.lock
+login/
+vendor/
+sessionservices/
+persistenceservices/

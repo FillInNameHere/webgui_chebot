@@ -107,6 +107,20 @@ if ($paramName === "first") {
 <div style="float: right;">
     <iframe src="<?php echo $gameLog->getGameURL(); ?>"
             style="width: 1000px; height: 920px; border: none;"></iframe>
+    <div style="border: #27a598">
+        <h1>Information</h1>
+        <p><?php
+            echo "The game was ";
+            if ($gameLog->getWin() == 1) echo "won\n\r";
+            else echo "lost\n\r";
+            echo "The game did ";
+            if ($gameLog->getCrashed() == 0) echo "not ";
+            echo "end normally ";
+            if ($gameLog->getCrashed() == 1) echo "the last message was " . $gameLog->getEndMessage();
+            ?></p>
+        <p><?php ?></p>
+    </div>
+
 </div>
 <div id="data_form">
     <h2><span style="color: #fff;">Choose:</span></h2>
@@ -122,14 +136,14 @@ if ($paramName === "first") {
         ?>
         <span></span>
     </form>
-    <br/>
 </div>
+
 <div>
     <?php
     if ($paramName === 'all') {
         ?>
         <div style="float: left;">
-            <table>
+            <table style="width: 100%">
                 <tr>
                     <th>ID</th>
                     <th>Turn</th>
@@ -168,7 +182,7 @@ if ($paramName === "first") {
         $currentStep = $gameSteps[$currentStepIndex];
         ?>
         <div style="float: left;">
-            <table>
+            <table style="width: 100%">
                 <tr>
                     <th>ID</th>
                     <th>Turn</th>
@@ -181,7 +195,8 @@ if ($paramName === "first") {
                 </tr>
                 <tr>
                     <td><?php echo $currentStep->getGameStepId(); ?></td>
-                    <td><?php echo $currentStep->getTurn(); ?></td><td><?php
+                    <td><?php echo $currentStep->getTurn(); ?></td>
+                    <td><?php
                         if ($currentStep->getBestActionThen() == 0) echo "Tavern";
                         elseif ($currentStep->getBestActionThen() == 1) echo "Mine";
                         elseif ($currentStep->getBestActionThen() == 2) echo "Fight";
@@ -197,9 +212,9 @@ if ($paramName === "first") {
                 </tr>
             </table>
         </div>
-        <?php if($currentStep->getChosenAction() != 3) { ?>
-            <div>
-                <table>
+        <?php if ($currentStep->getChosenAction() != 3) { ?>
+            <div style="float: left;">
+                <table style="width: 100%">
                     <tr>
                         <th>Reward</th>
                         <th>Explanation</th>

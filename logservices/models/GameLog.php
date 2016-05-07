@@ -63,7 +63,7 @@ class GameLog
      * @Column(type="integer")
      */
     protected $smallestReward;
-    
+
     /**
      * @Column(type="string")
      */
@@ -389,5 +389,21 @@ class GameLog
     public function setSmallestReward($smallestReward)
     {
         $this->smallestReward = $smallestReward;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEndMessage()
+    {
+        return $this->endMessage;
+    }
+
+    /**
+     * @param mixed $endMessage
+     */
+    public function setEndMessage($endMessage)
+    {
+        $this->endMessage = $endMessage;
     }
 }

@@ -96,26 +96,28 @@ $states = $glREPO->getStates();
         <?php } ?>
     </div>
     <div style="width:49%; float: right; border: solid #27a598; padding-left: 5pt">
-        <h1>Info</h1>
+        <h1>Statistics</h1>
         <h2>Winrate</h2>
         <div style="width: auto">
             <?php
             $noOfWins = count($glREPO->findWinningGameLogs());
             $noOfGames = count($glREPO->findAllGameLogs());
             $noOfCrashed = count($glREPO->findByCrash(1));
+            $noOfLoses = count($glREPO->findLostGameLogs())-$noOfCrashed;
             $winrate = ($noOfWins / ($noOfGames - $noOfCrashed)) * 100;
             ?>
 
-            <p>With <?php echo $noOfGames ?> games</p>
-            <p>With <?php echo $noOfCrashed ?> not finished games</p>
+            <p>Total <?php echo $noOfGames ?> games</p>
+            <p><?php echo $noOfCrashed ?> unfinished games</p>
+            <p>And <?php echo $noOfLoses?> losses</p>
             <p>Total <?php echo $noOfWins;
                 if ($noOfWins > 1) {
                     echo " wins";
                 } else {
                     echo " win";
                 } ?></p>
-            <p><?php echo number_format($winrate, 2) . "%" ?></p>
-            <h3> Note: Crashed (Not-Finished) games do not count as losses</h3>
+            <p>Winrate: <?php echo number_format($winrate, 2) . "%" ?></p>
+            <h3> Note: Crashed (Unfinished) games do not count as losses</h3>
         </div>
     </div>
 </div>

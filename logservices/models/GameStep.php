@@ -24,6 +24,10 @@ Class GameStep
     /**
      * @Column(type="integer")
      */
+    protected $turn;
+    /**
+     * @Column(type="integer")
+     */
     protected $bestActionThen;
     /**
      * @Column(type="integer")
@@ -42,7 +46,7 @@ Class GameStep
      * @Column(type="float")
      */
     protected $newQval;
-    
+
     /**
      * @Column(type="float")
      */
@@ -166,6 +170,22 @@ Class GameStep
     public function setGameLogGameLogId($gameLog_gameLogId)
     {
         $this->gameLog_gameLogId = $gameLog_gameLogId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTurn()
+    {
+        return $this->turn;
+    }
+
+    /**
+     * @param mixed $turn
+     */
+    public function setTurn($turn)
+    {
+        $this->turn = $turn;
     }
 
 }

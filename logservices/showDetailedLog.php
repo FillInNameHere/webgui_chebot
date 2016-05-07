@@ -37,6 +37,11 @@ $gameSteps = $gsREPO->findAllGameSteps($gameLogId);
 <head>
     <Title>Vindinium Project - Detailed Log</Title>
     <style>
+        A:link {text-decoration: none; color: #72c9dc;}
+        A:visited {text-decoration: none; color: #72c9dc;}
+        A:active {text-decoration: none; color: #72c9dc;}
+        A:hover {text-decoration: none; color: #72c9dc;}
+
         table, th, td {
             border: 1px solid #666;
             border-collapse: collapse;
@@ -53,6 +58,7 @@ $gameSteps = $gsREPO->findAllGameSteps($gameLogId);
     </style>
 </head>
 <body bgcolor="#383b32">
+<h2><span style="color: #fff;">Gamelink: </span><a href="<?php echo $gameLog->getGameURL();?>" target="_blank"><?php echo $gameLog->getGameURL();?></a></h2>
 <div id="data_form">
     <h2><span style="color: #fff;">Choose:</span></h2>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -85,6 +91,7 @@ $gameSteps = $gsREPO->findAllGameSteps($gameLogId);
             <table>
                 <tr>
                     <th>ID</th>
+                    <th>Turn</th>
                     <th>Best Action</th>
                     <th>Chosen Action</th>
                     <th>Old Q-Value</th>
@@ -96,6 +103,7 @@ $gameSteps = $gsREPO->findAllGameSteps($gameLogId);
                 foreach ($gameSteps as $gs) { ?>
                     <tr>
                         <td><?php echo $gs->getGameStepId(); ?></td>
+                        <td><?php echo $gs->getTurn(); ?></td>
                         <td><?php echo $gs->getBestActionThen() ?></td>
                         <td><?php echo $gs->getChosenAction() ?></td>
                         <td><?php echo $gs->getOldQval() ?></td>
@@ -108,7 +116,7 @@ $gameSteps = $gsREPO->findAllGameSteps($gameLogId);
         </div>
         <div style="float: right;">
             <iframe src="<?php echo $gameLog->getGameURL(); ?>"
-                    style="width: 1000px; height: 865px; border: none;"></iframe>
+                    style="width: 1000px; height: 920px; border: none;"></iframe>
         </div>
         <?php
     }

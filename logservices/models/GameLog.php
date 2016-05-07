@@ -24,45 +24,63 @@ class GameLog
      */
     protected $gameURL;
 
+    /**
+     * @Column(type="integer")
+     */
     protected $whoAmI;
 
     /**
      * @Column(type="integer")
      */
     protected $win;
+
+    /**
+     * @Column(type="integer")
+     */
     protected $rounds;
+
+    /**
+     * @Column(type="string")
+     */
+    protected $startingTime;
+
+    /**
+     * @Column(type="integer")
+     */
+    protected $crashed;
+
+    /**
+     * @Column(type="integer")
+     */
+    protected $reward;
+
+    /**
+     * @Column(type="integer")
+     */
+    protected $biggestReward;
+
+    /**
+     * @Column(type="integer")
+     */
+    protected $smallestReward;
+    
+    /**
+     * @Column(type="string")
+     */
+    protected $endMessage;
+
+
+    protected $hero1;
+    protected $hero2;
+    protected $hero3;
+    protected $hero4;
     protected $tavern;
     protected $totalMineCount;
     protected $deathByEnemy;
     protected $deathByMine;
     protected $kills;
 
-    /**
-     * @Column(type="string")
-     */
-    protected $startingTime;
-    /**
-     * @Column(type="integer")
-     */
-    protected $crashed;
 
-    protected $hero1;
-    protected $hero2;
-    protected $hero3;
-    protected $hero4;
-
-    /**
-     * @Column(type="integer")
-     */
-    protected $reward;
-    /**
-     * @Column(type="integer")
-     */
-    protected $biggestReward;
-    /**
-     * @Column(type="integer")
-     */
-    protected $smallestReward;
 
     function __construct()
     {

@@ -18,10 +18,10 @@ class GameStepRepo
     private $entityManager;
     private $states = array(
         'all' => 'Get All',
-        'last' => 'Get Last',
         'first' => 'Get First',
+        'previous' => 'Get Previous',
         'next' => 'Get Next',
-        'previous' => 'Get Previous');
+        'last' => 'Get Last');
 
     /**
      * GameLogRepo constructor.

@@ -176,11 +176,11 @@ if ($paramName === "first") {
                         <td><?php echo $gs->getGameStepId(); ?></td>
                         <td><?php echo $gs->getTurn(); ?></td>
                         <?php
-                            if ($gs->getBestActionThen() == 0) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                            if ($gs->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
                             elseif ($gs->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
                             elseif ($gs->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
                             else echo "<td>Continue"; ?></td>
-                        <?php if ($gs->getChosenAction() == 0) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                        <?php if ($gs->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
                             elseif ($gs->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
                             elseif ($gs->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
                             else echo "<td>Continue"; ?></td>
@@ -213,11 +213,11 @@ if ($paramName === "first") {
                     <td><?php echo $currentStep->getGameStepId(); ?></td>
                     <td><?php echo $currentStep->getTurn(); ?></td>
                     <?php
-                        if ($currentStep->getBestActionThen() == 0) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                        if ($currentStep->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
                         elseif ($currentStep->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
                         elseif ($currentStep->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
                         else echo "Continue"; ?></td>
-                    <?php if ($currentStep->getChosenAction() == 0) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                    <?php if ($currentStep->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
                         elseif ($currentStep->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
                         elseif ($currentStep->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
                         else echo "<td>Continue"; ?></td>

@@ -46,7 +46,8 @@ class GameLogRepo
     private function findByWin($status)
     {
         $a = array('win' => $status);
-        $gameLogs = $this->entityManager->getRepository('vindinium\logservices\models\GameLog')->findBy($a);
+        $order = array('gameLogId' => 'DESC');
+        $gameLogs = $this->entityManager->getRepository('vindinium\logservices\models\GameLog')->findBy($a, $order);
         return $gameLogs;
     }
 

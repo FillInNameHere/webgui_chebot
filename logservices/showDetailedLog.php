@@ -65,7 +65,7 @@ if ($paramName === "first") {
 <html>
 <head>
     <Title>Vindinium Project - Detailed Log</Title>
-    <style>
+    <!--<style>
         A:link {
             text-decoration: none;
             color: #72c9dc;
@@ -99,10 +99,26 @@ if ($paramName === "first") {
             color: #999;
             padding: 5px;
         }
+    </style>-->
+    <style>
+        table, th, td {
+            border: 1px solid #666;
+            border-collapse: collapse;
+        }
+
+        table {
+            background-color: white;
+        }
+
+        th, td {
+            color: white;
+            padding: 5px;
+        }
     </style>
 </head>
-<body bgcolor="#383b32">
-<h2><span style="color: #fff;">Gamelink: </span><a href="<?php echo $gameLog->getGameURL(); ?>"
+<body bgcolor="white">
+<!--<body bgcolor="#383b32">-->
+<h2><span style="">Gamelink: </span><a href="<?php echo $gameLog->getGameURL(); ?>"
                                                    target="_blank"><?php echo $gameLog->getGameURL(); ?></a></h2>
 <div style="float: right;">
     <iframe src="<?php echo $gameLog->getGameURL(); ?>"
@@ -111,11 +127,11 @@ if ($paramName === "first") {
         <h1>Information</h1>
         <p><?php
             echo "The game was ";
-            if ($gameLog->getWin() == 1) echo "won\n\r";
-            else echo "lost\n\r";
+            if ($gameLog->getWin() == 1) echo "won.<br />";
+            else echo "lost.<br />";
             echo "The game did ";
-            if ($gameLog->getCrashed() == 0) echo "not ";
-            echo "end normally ";
+            if ($gameLog->getCrashed() == 1) echo "not ";
+            echo "end normally. ";
             if ($gameLog->getCrashed() == 1) echo "the last message was " . $gameLog->getEndMessage();
             ?></p>
         <p><?php ?></p>
@@ -123,7 +139,7 @@ if ($paramName === "first") {
 
 </div>
 <div id="data_form">
-    <h2><span style="color: #fff;">Choose:</span></h2>
+    <h2><span style="">Choose:</span></h2>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <?php
         foreach ($states as $name => $value) {

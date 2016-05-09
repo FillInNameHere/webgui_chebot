@@ -111,7 +111,7 @@ if ($paramName === "first") {
         }
 
         th, td {
-            color: white;
+            color: black;
             padding: 5px;
         }
     </style>
@@ -176,13 +176,13 @@ if ($paramName === "first") {
                         <td><?php echo $gs->getGameStepId(); ?></td>
                         <td><?php echo $gs->getTurn(); ?></td>
                         <td><?php
-                            if ($gs->getBestActionThen() == 0) echo "Tavern";
-                            elseif ($gs->getBestActionThen() == 1) echo "Mine";
-                            elseif ($gs->getBestActionThen() == 2) echo "Fight";
+                            if ($gs->getBestActionThen() == 0) {echo "<img src=\"tavern.png\" height=\"16px\" width=\"12px\" />"; echo "Tavern";}
+                            elseif ($gs->getBestActionThen() == 1) {echo "<img src=\"mine.png\" height=\"16px\" width=\"10px\" />"; echo "Mine";}
+                            elseif ($gs->getBestActionThen() == 2) {echo "<img src=\"fight.png\" height=\"16px\" width=\"16px\" />"; echo "Fight";}
                             else echo "Continue"; ?></td>
-                        <td><?php if ($gs->getChosenAction() == 0) echo "Tavern";
-                            elseif ($gs->getChosenAction() == 1) echo "Mine";
-                            elseif ($gs->getChosenAction() == 2) echo "Fight";
+                        <td><?php if ($gs->getChosenAction() == 0) {echo "<img src=\"tavern.png\" height=\"16px\" width=\"12px\" />"; echo "Tavern";}
+                            elseif ($gs->getChosenAction() == 1) {echo "<img src=\"mine.png\" height=\"16px\" width=\"10px\" />"; echo "Mine";}
+                            elseif ($gs->getChosenAction() == 2) {echo "<img src=\"fight.png\" height=\"16px\" width=\"16px\" />"; echo "Fight";}
                             else echo "Continue"; ?></td>
                         <td><?php echo $gs->getOldQval() ?></td>
                         <td><?php echo $gs->getNewQval() ?></td>
@@ -213,13 +213,13 @@ if ($paramName === "first") {
                     <td><?php echo $currentStep->getGameStepId(); ?></td>
                     <td><?php echo $currentStep->getTurn(); ?></td>
                     <td><?php
-                        if ($currentStep->getBestActionThen() == 0) echo "Tavern";
-                        elseif ($currentStep->getBestActionThen() == 1) echo "Mine";
-                        elseif ($currentStep->getBestActionThen() == 2) echo "Fight";
+                        if ($currentStep->getBestActionThen() == 0) {echo "<img src=\"tavern.png\" height=\"16px\" width=\"12px\" />"; echo "Tavern";}
+                        elseif ($currentStep->getBestActionThen() == 1) {echo "<img src=\"mine.png\" height=\"16px\" width=\"10px\" />"; echo "Mine";}
+                        elseif ($currentStep->getBestActionThen() == 2) {echo "<img src=\"fight.png\" height=\"16px\" width=\"16px\" />"; echo "Fight";}
                         else echo "Continue"; ?></td>
-                    <td><?php if ($currentStep->getChosenAction() == 0) echo "Tavern";
-                        elseif ($currentStep->getChosenAction() == 1) echo "Mine";
-                        elseif ($currentStep->getChosenAction() == 2) echo "Fight";
+                    <td><?php if ($currentStep->getChosenAction() == 0) {echo "<img src=\"tavern.png\" height=\"16px\" width=\"12px\" />"; echo "Tavern";}
+                        elseif ($currentStep->getChosenAction() == 1) {echo "<img src=\"mine.png\" height=\"16px\" width=\"10px\" />"; echo "Mine";}
+                        elseif ($currentStep->getChosenAction() == 2) {echo "<img src=\"fight.png\" height=\"16px\" width=\"16px\" />"; echo "Fight";}
                         else echo "Continue"; ?></td>
                     <td><?php echo $currentStep->getOldQval() ?></td>
                     <td><?php echo $currentStep->getNewQval() ?></td>

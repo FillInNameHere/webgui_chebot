@@ -22,15 +22,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logservices/chebot1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="69" selection-end-column="14" />
+            <state vertical-scroll-proportion="2.4592423">
+              <caret line="126" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="160" selection-end-column="7" />
               <folding>
                 <element signature="e#181#222#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -51,19 +52,10 @@
       <file leaf-file-name="showDetailedLog.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logservices/chebot1/showDetailedLog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="335.26923">
-              <caret line="29" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="587" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
               <folding>
                 <element signature="e#235#276#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1462867699352" expanded="true" signature="14948:15316" placeholder="..." />
                 <marker date="1462867699352" expanded="true" signature="15523:15896" placeholder="..." />
                 <marker date="1462867699352" expanded="true" signature="16103:16476" placeholder="..." />
@@ -98,10 +90,13 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logservices/chebot2/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.6923075">
-              <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+            <state vertical-scroll-proportion="-22.884615">
+              <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
               <folding>
                 <element signature="e#181#222#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -109,22 +104,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showDetailedLog.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="showDetailedLog.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logservices/chebot2/showDetailedLog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1859931">
-              <caret line="142" column="43" selection-start-line="142" selection-start-column="43" selection-end-line="142" selection-end-column="43" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="154" column="14" selection-start-line="154" selection-start-column="14" selection-end-line="154" selection-end-column="14" />
               <folding>
                 <element signature="e#235#276#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1462867822192" expanded="true" signature="14184:14572" placeholder="..." />
                 <marker date="1462867822192" expanded="true" signature="14763:15156" placeholder="..." />
                 <marker date="1462867822192" expanded="true" signature="15347:15740" placeholder="..." />
@@ -171,10 +157,10 @@
         <option value="$PROJECT_DIR$/logservices/repo/GameLogRepo.php" />
         <option value="$PROJECT_DIR$/logservices/chebot1/config.php" />
         <option value="$PROJECT_DIR$/logservices/chebot2/config.php" />
-        <option value="$PROJECT_DIR$/logservices/chebot1/index.php" />
-        <option value="$PROJECT_DIR$/logservices/chebot2/index.php" />
         <option value="$PROJECT_DIR$/logservices/chebot1/showDetailedLog.php" />
         <option value="$PROJECT_DIR$/logservices/chebot2/showDetailedLog.php" />
+        <option value="$PROJECT_DIR$/logservices/chebot1/index.php" />
+        <option value="$PROJECT_DIR$/logservices/chebot2/index.php" />
       </list>
     </option>
   </component>
@@ -219,8 +205,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -432,7 +418,7 @@
     <option name="totallyTimeSpent" value="23939000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -476,11 +462,232 @@
     <entry file="file://$PROJECT_DIR$/logservices/chebot1/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#181#222#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot1/showDetailedLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="587" selection-end-column="0" />
+          <folding>
+            <element signature="e#235#276#0#PHP" expanded="true" />
+            <marker date="1462867699352" expanded="true" signature="14948:15316" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="15523:15896" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="16103:16476" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="16686:17063" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="17281:17662" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="17936:18309" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="18516:18889" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="19096:19469" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="19667:20011" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="20268:20641" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="20849:21136" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="21346:21716" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="21931:22393" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="22576:22912" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="23168:23565" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="23773:24156" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="24372:24822" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="25096:25469" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="25677:26039" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="26257:26655" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="26865:27248" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="27463:27925" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="28182:28555" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="28762:29135" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="29368:29703" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="29929:30240" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot2/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="e#181#222#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot2/showDetailedLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="14" selection-start-line="154" selection-start-column="14" selection-end-line="154" selection-end-column="14" />
+          <folding>
+            <element signature="e#235#276#0#PHP" expanded="true" />
+            <marker date="1462867822192" expanded="true" signature="14184:14572" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="14763:15156" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="15347:15740" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="15934:16331" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="16533:16934" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="17188:17581" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="17772:18165" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="18356:18749" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="18931:19295" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="19532:19925" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="20117:20420" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="20614:21004" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="21203:21685" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="21852:22208" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="22444:22861" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="23053:23456" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="23656:24126" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="24380:24773" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="24965:25347" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="25549:25967" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="26161:26564" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="26763:27245" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="27482:27875" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="28066:28459" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="28672:29027" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="29237:29568" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="69" selection-end-column="14" />
+          <folding>
+            <element signature="e#181#222#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot1/showDetailedLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="587" selection-end-column="0" />
+          <folding>
+            <element signature="e#235#276#0#PHP" expanded="true" />
+            <marker date="1462867699352" expanded="true" signature="14948:15316" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="15523:15896" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="16103:16476" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="16686:17063" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="17281:17662" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="17936:18309" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="18516:18889" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="19096:19469" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="19667:20011" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="20268:20641" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="20849:21136" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="21346:21716" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="21931:22393" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="22576:22912" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="23168:23565" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="23773:24156" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="24372:24822" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="25096:25469" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="25677:26039" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="26257:26655" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="26865:27248" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="27463:27925" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="28182:28555" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="28762:29135" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="29368:29703" placeholder="..." />
+            <marker date="1462867699352" expanded="true" signature="29929:30240" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot2/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="e#181#222#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot2/showDetailedLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#235#276#0#PHP" expanded="true" />
+            <marker date="1462867822192" expanded="true" signature="14184:14572" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="14763:15156" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="15347:15740" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="15934:16331" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="16533:16934" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="17188:17581" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="17772:18165" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="18356:18749" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="18931:19295" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="19532:19925" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="20117:20420" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="20614:21004" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="21203:21685" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="21852:22208" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="22444:22861" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="23053:23456" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="23656:24126" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="24380:24773" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="24965:25347" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="25549:25967" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="26161:26564" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="26763:27245" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="27482:27875" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="28066:28459" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="28672:29027" placeholder="..." />
+            <marker date="1462867822192" expanded="true" signature="29237:29568" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
           <folding>
             <element signature="e#181#222#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -493,15 +700,6 @@
           <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
           <folding>
             <element signature="e#235#276#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1462867699352" expanded="true" signature="14948:15316" placeholder="..." />
             <marker date="1462867699352" expanded="true" signature="15523:15896" placeholder="..." />
             <marker date="1462867699352" expanded="true" signature="16103:16476" placeholder="..." />
@@ -538,6 +736,9 @@
           <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
           <folding>
             <element signature="e#181#222#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -550,15 +751,6 @@
           <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
           <folding>
             <element signature="e#235#276#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1462867822192" expanded="true" signature="14184:14572" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="14763:15156" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="15347:15740" placeholder="..." />
@@ -610,8 +802,9 @@
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
           <folding>
             <element signature="e#181#222#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -624,6 +817,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#181#222#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -636,15 +832,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#235#276#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1462867822192" expanded="true" signature="14184:14572" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="14763:15156" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="15347:15740" placeholder="..." />
@@ -681,15 +868,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#235#276#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1462867699352" expanded="true" signature="14948:15316" placeholder="..." />
             <marker date="1462867699352" expanded="true" signature="15523:15896" placeholder="..." />
             <marker date="1462867699352" expanded="true" signature="16103:16476" placeholder="..." />
@@ -761,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,32 +1076,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logservices/chebot2/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.6923075">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+        <state vertical-scroll-proportion="-22.884615">
+          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
           <folding>
             <element signature="e#181#222#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.307693">
-          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logservices/chebot1/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="69" selection-end-column="14" />
-          <folding>
-            <element signature="e#181#222#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -935,19 +1091,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logservices/chebot1/showDetailedLog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="335.26923">
-          <caret line="29" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="587" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
           <folding>
             <element signature="e#235#276#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1462867699352" expanded="true" signature="14948:15316" placeholder="..." />
             <marker date="1462867699352" expanded="true" signature="15523:15896" placeholder="..." />
             <marker date="1462867699352" expanded="true" signature="16103:16476" placeholder="..." />
@@ -980,19 +1127,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logservices/chebot2/showDetailedLog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1859931">
-          <caret line="142" column="43" selection-start-line="142" selection-start-column="43" selection-end-line="142" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="14" selection-start-line="154" selection-start-column="14" selection-end-line="154" selection-end-column="14" />
           <folding>
             <element signature="e#235#276#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1462867822192" expanded="true" signature="14184:14572" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="14763:15156" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="15347:15740" placeholder="..." />
@@ -1019,6 +1157,29 @@
             <marker date="1462867822192" expanded="true" signature="28066:28459" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="28672:29027" placeholder="..." />
             <marker date="1462867822192" expanded="true" signature="29237:29568" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.307693">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logservices/chebot1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4592423">
+          <caret line="126" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="160" selection-end-column="7" />
+          <folding>
+            <element signature="e#181#222#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

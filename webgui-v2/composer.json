@@ -1,0 +1,15 @@
+{
+  "name": "vindinium/web_client",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Example User",
+      "email": "mail@example.com"
+    }
+  ],
+  "require": {
+    "doctrine/orm": "2.6.x-dev"
+  }
+}

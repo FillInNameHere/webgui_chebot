@@ -57,531 +57,491 @@ if ($paramName === "first") {
 ?>
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <!-- Language settings -->
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
-        <!-- Latest compiled and minified JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <title>Vindinium Projekt - CHEBot v2.0 - Detailed Log - ID: <?php echo $gameLogId ?></title>
-        <!--<style>
-            A:link {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            A:visited {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            A:active {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            A:hover {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            table, th, td {
-                border: 1px solid #666;
-                border-collapse: collapse;
-            }
-
-            table {
-                background-color: #333;
-            }
-
-            th, td {
-                color: #999;
-                padding: 5px;
-            }
-        </style>-->
-        <style>
-            table, th, td {
-                border: 1px solid #666;
-                border-collapse: collapse;
-            }
-
-            table {
-                background-color: white;
-            }
-
-            th, td {
-                color: black;
-                padding: 5px;
-            }
-        </style>
-    </head>
-    <body bgcolor="#383b32">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" style="border-bottom: 1px solid #000; margin: 0;">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../chebot2/">CHEBot v2.0</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="../chebot2/">GameOverview</a></li>
-                    <li><a href="../chebot2/config.php">Config</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Bot-Version <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../chebot1/">CHEBot v1.0</a></li>
-                            <li><a href="../chebot2/">CHEBot v2.0</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- navbar-collapse -->
+<head>
+    <!-- Language settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+    <!-- Latest compiled and minified JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Vindinium Projekt - CHEBot v2.0 - Detailed Log - GameID: <?php echo $gameLogId ?></title>
+</head>
+<body bgcolor="#383b32">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-static-top" style="border-bottom: 1px solid #000; margin: 0;">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../chebot2/">CHEBot v2.0</a>
         </div>
-    </nav>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="../chebot2/">GameOverview</a></li>
+                <li><a href="../chebot2/config.php">Config</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Bot-Version <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../chebot1/">CHEBot v1.0</a></li>
+                        <li><a href="../chebot2/">CHEBot v2.0</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- navbar-collapse -->
+    </div>
+</nav>
+
+<div style="float: right; position: fixed; top: 25px; padding-left: 5px; right: 5px;">
+    <iframe src="<?php echo $gameLog->getGameURL(); ?>" style="width: 1000px; height: 920px; border: none;"></iframe>
     <div class="jumbotron">
-        <h2><span style="">Gamelink: </span><a href="<?php echo $gameLog->getGameURL(); ?>" target="_blank"><?php echo $gameLog->getGameURL(); ?></a></h2>
-    </div>
-    <div id="data_form">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <h1>Information</h1>
+        <p>
             <?php
-            foreach ($states as $name => $value) {
-                ?>
-                <input type="submit" value="<?php echo $value; ?>" name="<?php echo $name; ?>"/>
-                <input type="hidden" name="gameLogId" value="<?php echo $gameLogId; ?>"/>
-                <input type="hidden" name="currentStepIndex" value="<?php echo $currentStepIndex; ?>"/>
-                <?php
-            }
+            echo "The game was ";
+            if ($gameLog->getWin() == 1) echo "won.<br />";
+            else echo "lost.<br />";
+            echo "The game did ";
+            if ($gameLog->getCrashed() == 1) echo "not ";
+            echo "end normally. ";
+            if ($gameLog->getCrashed() == 1) echo "the last message was " . $gameLog->getEndMessage();
             ?>
-            <span></span>
-        </form>
+        </p>
     </div>
+</div>
 
-    <div>
+
+<div class="jumbotron" style="padding-left: 10px;">
+    <h2><span style="">Gamelink: </span><a href="<?php echo $gameLog->getGameURL(); ?>" target="_blank"><?php echo $gameLog->getGameURL(); ?></a></h2>
+</div>
+<div id="data_form">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <?php
-        if ($paramName === 'all') {
+        foreach ($states as $name => $value) {
             ?>
-            <div style="float: left; width: 50%;">
-                <table style="width: 100%">
-                    <tr>
-                        <th>ID</th>
-                        <th>Turn</th>
-                        <th>Best Action</th>
-                        <th>Chosen Action</th>
-                        <th>Old Q-Value</th>
-                        <th>New Q-Value</th>
-                        <th>Reward</th>
-                        <th>State</th>
-                    </tr>
-                    <?php
-                    foreach ($gameSteps as $gs) { ?>
-                        <tr>
-                            <td><?php echo $gs->getGameStepId(); ?></td>
-                            <td><?php echo $gs->getTurn(); ?></td>
-                            <?php
-                            if ($gs->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                            elseif ($gs->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                            elseif ($gs->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                            else echo "<td>Continue"; ?></td>
-                            <?php if ($gs->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                            elseif ($gs->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                            elseif ($gs->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                            else echo "<td>Continue"; ?></td>
-                            <td><?php echo $gs->getOldQval() ?></td>
-                            <td><?php echo $gs->getNewQval() ?></td>
-                            <td><?php echo $gs->getReward() ?></td>
-                            <td><?php echo $gs->getStateStateId() ?></td>
-                        </tr>
-                    <?php } ?>
-                </table>
-            </div>
+            <input type="submit" value="<?php echo $value; ?>" name="<?php echo $name; ?>"/>
+            <input type="hidden" name="gameLogId" value="<?php echo $gameLogId; ?>"/>
+            <input type="hidden" name="currentStepIndex" value="<?php echo $currentStepIndex; ?>"/>
             <?php
         }
-        if ($paramName != "all") {
-            $currentStep = $gameSteps[$currentStepIndex];
-            ?>
+        ?>
+    </form><br />
+
+    <?php
+    if ($paramName === 'all') {
+    ?>
+    <div style="float: left; width: 47%;">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead bgcolor="#fff">
+                <tr>
+                    <th>ID</th>
+                    <th>Turn</th>
+                    <th>Best Action</th>
+                    <th>Chosen Action</th>
+                    <th>Old Q-Value</th>
+                    <th>New Q-Value</th>
+                    <th>Reward</th>
+                    <th>State</th>
+                </tr>
+                </thead>
+                </tbody>
+                </tr>
+                <?php
+                foreach ($gameSteps as $gs) { ?>
+                    <tr>
+                        <td><?php echo $gs->getGameStepId(); ?></td>
+                        <td><?php echo $gs->getTurn(); ?></td>
+                        <?php
+                        if ($gs->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                        elseif ($gs->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                        elseif ($gs->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                        else echo "<td>Continue"; ?></td>
+                        <?php if ($gs->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                        elseif ($gs->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                        elseif ($gs->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                        else echo "<td>Continue"; ?></td>
+                        <td><?php echo $gs->getOldQval() ?></td>
+                        <td><?php echo $gs->getNewQval() ?></td>
+                        <td><?php echo $gs->getReward() ?></td>
+                        <td><?php echo $gs->getStateStateId() ?></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <?php
+        }?></div>
+    <?php
+    if ($paramName != "all") {
+    $currentStep = $gameSteps[$currentStepIndex];
+    ?>
+    <div style="float: left; width: 47%;">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead bgcolor="#fff">
+                <tr>
+                    <th>ID</th>
+                    <th>Turn</th>
+                    <th>Best Action</th>
+                    <th>Chosen Action</th>
+                    <th>Old Q-Value</th>
+                    <th>New Q-Value</th>
+                    <th>Reward</th>
+                    <th>State</th>
+                </tr>
+                </thead>
+                </tbody>
+                <tr>
+                    <td><?php echo $currentStep->getGameStepId(); ?></td>
+                    <td><?php echo $currentStep->getTurn(); ?></td>
+                    <?php
+                    if ($currentStep->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                    elseif ($currentStep->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                    elseif ($currentStep->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                    else echo "Continue"; ?></td>
+                    <?php if ($currentStep->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                    elseif ($currentStep->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                    elseif ($currentStep->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                    else echo "<td>Continue"; ?></td>
+                    <td><?php echo $currentStep->getOldQval() ?></td>
+                    <td><?php echo $currentStep->getNewQval() ?></td>
+                    <td><?php echo $currentStep->getReward() ?></td>
+                    <td><?php echo $currentStep->getStateStateId() ?></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <?php if ($currentStep->getChosenAction() != 3) { ?>
             <div style="float: left;">
                 <table style="width: 100%">
                     <tr>
-                        <th>ID</th>
-                        <th>Turn</th>
-                        <th>Best Action</th>
-                        <th>Chosen Action</th>
-                        <th>Old Q-Value</th>
-                        <th>New Q-Value</th>
                         <th>Reward</th>
-                        <th>State</th>
+                        <th>Explanation</th>
+                        <th>State-Part</th>
+                        <th>Description</th>
                     </tr>
-                    <tr>
-                        <td><?php echo $currentStep->getGameStepId(); ?></td>
-                        <td><?php echo $currentStep->getTurn(); ?></td>
-                        <?php
-                        if ($currentStep->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                        elseif ($currentStep->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                        elseif ($currentStep->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                        else echo "Continue"; ?></td>
-                        <?php if ($currentStep->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                        elseif ($currentStep->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                        elseif ($currentStep->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                        else echo "<td>Continue"; ?></td>
-                        <td><?php echo $currentStep->getOldQval() ?></td>
-                        <td><?php echo $currentStep->getNewQval() ?></td>
-                        <td><?php echo $currentStep->getReward() ?></td>
-                        <td><?php echo $currentStep->getStateStateId() ?></td>
-                    </tr>
+                    <?php
+                    $reward = $currentStep->getReward();
+                    $state = $currentStep->getStateStateId();
+                    $chosenAction = $currentStep->getChosenAction();
+                    $action = "error";
+                    if ($chosenAction == 0) $action = "going to the next tavern";
+                    if ($chosenAction == 1) $action = "going to the next mine";
+                    if ($chosenAction == 2) $action = "engaging the closest enemy";
+
+                    $timeRangeFactor = 0.125;
+                    $calcReward = 0;
+                    $rewardKat1 = -200;
+                    $rewardKat2 = -75;
+                    $rewardKat3 = -25;
+                    $rewardKat4 = -2;
+                    $rewardKat5 = 13;
+                    $rewardKat6 = 50;
+                    $rewardKat7 = 75;
+
+                    $place = intval(substr($state, 0, 1));
+                    $ownLife = intval(substr($state, 1, 1));
+                    $ownMines = intval(substr($state, 2, 1));
+                    $distanceBiggerFour = intval(substr($state, 3, 1));
+                    $enemyMines = intval(substr($state, 4, 1));
+                    $enemyLife = intval(substr($state, 5, 1));
+                    $timeRange = intval(substr($state, 6, 1));
+                    $minTwoGold = intval(substr($state, 7, 1));
+
+
+                    // Kategorie 1 (-200)
+                    if ($chosenAction == 0 && $minTwoGold == 0) {
+                        $calcReward += $rewardKat1;
+                        echo "<tr>
+                                <td>$rewardKat1</td>
+                                <td>For $action and less than 2 Gold</td>
+                                <td>$place$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange<mark>$minTwoGold</mark></td>
+                                <td>Bot has more than 2 gold</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 0 && $ownLife == 9) {
+                        $calcReward += $rewardKat1;
+                        echo "<tr>
+                                <td>$rewardKat1</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 1 && $ownLife <= 1) {
+                        $calcReward += $rewardKat1;
+                        echo "<tr>
+                                <td>$rewardKat1</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $enemyMines == 0) {
+                        $calcReward += $rewardKat1;
+                        echo "<tr>
+                                <td>$rewardKat1</td>
+                                <td>For $action while closest enemy has no mines</td>
+                                <td>$place$ownLife$ownMines$distanceBiggerFour<mark>$enemyMines</mark>$enemyLife$timeRange$minTwoGold</td>
+                                <td>Closest enemy's mines</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $distanceBiggerFour == 1) {
+                        $calcReward += $rewardKat1;
+                        echo "<tr>
+                                <td>$rewardKat1</td>
+                                <td>For $action while enemy is far away</td>
+                                <td>$place$ownLife$ownMines<mark>$distanceBiggerFour</mark>$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Enemy is further away than 4 cells</td>
+                              </tr>";
+                    }
+
+
+                    // Kategorie 2 (-75)
+                    if ($chosenAction == 0 && $ownLife >= 7 && $ownLife <= 8) {
+                        $calcReward += $rewardKat2;
+                        echo "<tr>
+                                <td>$rewardKat2</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 1 && $ownLife == 2) {
+                        $calcReward += $rewardKat2;
+                        echo "<tr>
+                                <td>$rewardKat2</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $ownLife <= 1) {
+                        $calcReward += $rewardKat2;
+                        echo "<tr>
+                                <td>$rewardKat2</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($place >= 3 && $place <= 4) {
+                        $calcReward += $rewardKat2;
+                        echo "<tr>
+                                <td>$rewardKat2</td>
+                                <td>For being $place.</td>
+                                <td><mark>$place</mark>$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own bot ranking</td>
+                              </tr>";
+                    }
+
+
+                    // Kategorie 3 (-25)
+                    if ($chosenAction == 0 && $ownLife == 6) {
+                        $calcReward += $rewardKat3;
+                        echo "<tr>
+                                <td>$rewardKat3</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $ownMines == 3) {
+                        $calcReward += $rewardKat3;
+                        echo "<tr>
+                                <td>$rewardKat3</td>
+                                <td>$place$ownLife<mark>$ownMines</mark>$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Bot has >=8 mines</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $enemyMines == 1) {
+                        $calcReward += $rewardKat3;
+                        echo "<tr>
+                                <td>$rewardKat3</td>
+                                <td>For $action while enemy has $enemyMines</td>
+                                <td>$place$ownLife$ownMines$distanceBiggerFour<mark>$enemyMines</mark>$enemyLife$timeRange$minTwoGold</td>
+                                <td>Enemy has 1-3 mines</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $enemyLife > $ownLife) {
+                        $calcReward += $rewardKat3;
+                        echo "<tr>
+                                <td>$rewardKat3</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health while enemy has " . (1 + $enemyLife) * 10 . "</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
+                                <td>1. Own health, 2. Closest enemy's health</td>
+                              </tr>";
+                    }
+
+                    if ($place == 2) {
+                        $calcReward += $rewardKat3;
+                        echo "<tr>
+                                <td>$rewardKat3</td>
+                                <td>For being Second</td>
+                                <td><mark>$place</mark>$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own rank</td>
+                              </tr>";
+                    }
+
+
+                    // Kategorie 4 (-2)
+                    if ($chosenAction == 0 && $ownLife == 5) {
+                        $calcReward += $rewardKat4;
+                        echo "<tr>
+                                <td>$rewardKat4</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>" . (1 + $ownLife) * 10 . " health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $ownMines == 2) {
+                        $calcReward += $rewardKat4;
+                        echo "<tr>
+                                <td>$rewardKat4</td>
+                                <td>For $action with 4-7 owned mines</td>
+                                <td>$place$ownLife<mark>$ownMines</mark>$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
+                                <td>Bot's minecount (Abstract)</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $enemyLife == $ownLife) {
+                        $calcReward += $rewardKat4;
+                        echo "<tr>
+                                <td>$rewardKat4</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health while enemy has (1+$enemyLife)*10</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
+                                <td>1. Own health, 2. Closest enemy's health</td>
+                              </tr>";
+                    }
+
+
+                    // Kategorie 5 (+13)
+                    if ($chosenAction == 0 && $ownLife >= 3 && $ownLife <= 4) {
+                        $calcReward += $rewardKat5;
+                        echo "<tr>
+                                <td>$rewardKat5</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $ownMines <= 1) {
+                        $calcReward += $rewardKat5;
+                        echo "<tr>
+                                <td>$rewardKat5</td>
+                                <td>For $action with 0-3 Mines</td>
+                                <td>$place$ownLife<mark>$ownMines</mark>$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own minecount (Abstract)</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $distanceBiggerFour == 0) {
+                        $calcReward += $rewardKat5;
+                        echo "<tr>
+                                <td>$rewardKat5</td>
+                                <td>For $action while closest enemy is closer than 4 cells</td>
+                                <td>$place$ownLife$ownMines<mark>$distanceBiggerFour</mark>$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Closest enemy distance > 4 cells</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $enemyMines >= 2) {
+                        $calcReward += $rewardKat5;
+                        echo "<tr>
+                                <td>$rewardKat5</td>
+                                <td>For $action while enemy has >3 mines</td>
+                                <td>$place$ownLife$ownMines$distanceBiggerFour<mark>$enemyMines</mark>$enemyLife$timeRange$minTwoGold</td>
+                                <td>Closest enemys minecount (Abstract)</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 2 && $enemyLife < $ownLife) {
+                        $calcReward += $rewardKat5;
+                        echo "<tr>
+                                <td>$rewardKat5</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health while enemy has " . (1 + $enemyLife) * 10 . "</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
+                                <td>1. Own health, 2. Closest enemy's health</td>
+                              </tr>";
+                    }
+
+
+                    // Kategorie 6 (+50)
+                    if ($chosenAction == 0 && $ownLife <= 2) {
+                        $calcReward += $rewardKat6;
+                        echo "<tr>
+                                <td>$rewardKat6</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+                    if ($chosenAction == 1 && $ownLife >= 3) {
+                        $calcReward += $rewardKat6;
+                        echo "<tr>
+                                <td>$rewardKat6</td>
+                                <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
+                                <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own health</td>
+                              </tr>";
+                    }
+
+
+                    // Kategorie 7 (+75)
+                    if ($place == 1) {
+                        $calcReward += $rewardKat7;
+                        echo "<tr>
+                                <td>$rewardKat7</td>
+                                <td>For being first</td>
+                                <td><mark>$place</mark>$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td>Own rank</td>
+                              </tr>";
+                    }
+
+                    // timeRangeFaktor
+                    $calcReward2 = intval(($calcReward * (1 + ($timeRange * $timeRangeFactor))));
+
+                    echo "<tr>
+                                <td>$calcReward</td>
+                                <td>Total reward</td>
+                                <td>$place$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
+                                <td></td>
+                              </tr>";
+                    ?>
                 </table>
             </div>
-
-            <div style="float: right; position: fixed; padding-top: 10px; padding-left: 10px; right: 10%;">
-                <iframe src="<?php echo $gameLog->getGameURL(); ?>" style="width: 1000px; height: 920px; border: none;"></iframe>
-                <div class="jumbotron">
-                    <h1>Information</h1>
-                    <p>
-                        <?php
-                        echo "The game was ";
-                        if ($gameLog->getWin() == 1) echo "won.<br />";
-                        else echo "lost.<br />";
-                        echo "The game did ";
-                        if ($gameLog->getCrashed() == 1) echo "not ";
-                        echo "end normally. ";
-                        if ($gameLog->getCrashed() == 1) echo "the last message was " . $gameLog->getEndMessage();
-                        ?>
-                    </p>
-                </div>
-            </div>
-
-            <?php if ($currentStep->getChosenAction() != 3) { ?>
-                <div style="float: left;">
-                    <table style="width: 100%">
-                        <tr>
-                            <th>Reward</th>
-                            <th>Explanation</th>
-                            <th>State-Part</th>
-                            <th>Description</th>
-                        </tr>
-                        <?php
-                        $reward = $currentStep->getReward();
-                        $state = $currentStep->getStateStateId();
-                        $chosenAction = $currentStep->getChosenAction();
-                        $action = "error";
-                        if ($chosenAction == 0) $action = "going to the next tavern";
-                        if ($chosenAction == 1) $action = "going to the next mine";
-                        if ($chosenAction == 2) $action = "engaging the closest enemy";
-
-                        $timeRangeFactor = 0.125;
-                        $calcReward = 0;
-                        $rewardKat1 = -200;
-                        $rewardKat2 = -75;
-                        $rewardKat3 = -25;
-                        $rewardKat4 = -2;
-                        $rewardKat5 = 13;
-                        $rewardKat6 = 50;
-                        $rewardKat7 = 75;
-
-                        $place = intval(substr($state, 0, 1));
-                        $ownLife = intval(substr($state, 1, 1));
-                        $ownMines = intval(substr($state, 2, 1));
-                        $distanceBiggerFour = intval(substr($state, 3, 1));
-                        $enemyMines = intval(substr($state, 4, 1));
-                        $enemyLife = intval(substr($state, 5, 1));
-                        $timeRange = intval(substr($state, 6, 1));
-                        $minTwoGold = intval(substr($state, 7, 1));
-
-
-                        // Kategorie 1 (-200)
-                        if ($chosenAction == 0 && $minTwoGold == 0) {
-                            $calcReward += $rewardKat1;
-                            echo "<tr>
-                                    <td>$rewardKat1</td>
-                                    <td>For $action and less than 2 Gold</td>
-                                    <td>$place$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange<mark>$minTwoGold</mark></td>
-                                    <td>Bot has more than 2 gold</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 0 && $ownLife == 9) {
-                            $calcReward += $rewardKat1;
-                            echo "<tr>
-                                    <td>$rewardKat1</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 1 && $ownLife <= 1) {
-                            $calcReward += $rewardKat1;
-                            echo "<tr>
-                                    <td>$rewardKat1</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $enemyMines == 0) {
-                            $calcReward += $rewardKat1;
-                            echo "<tr>
-                                    <td>$rewardKat1</td>
-                                    <td>For $action while closest enemy has no mines</td>
-                                    <td>$place$ownLife$ownMines$distanceBiggerFour<mark>$enemyMines</mark>$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Closest enemy's mines</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $distanceBiggerFour == 1) {
-                            $calcReward += $rewardKat1;
-                            echo "<tr>
-                                    <td>$rewardKat1</td>
-                                    <td>For $action while enemy is far away</td>
-                                    <td>$place$ownLife$ownMines<mark>$distanceBiggerFour</mark>$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Enemy is further away than 4 cells</td>
-                                  </tr>";
-                        }
-
-
-                        // Kategorie 2 (-75)
-                        if ($chosenAction == 0 && $ownLife >= 7 && $ownLife <= 8) {
-                            $calcReward += $rewardKat2;
-                            echo "<tr>
-                                    <td>$rewardKat2</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 1 && $ownLife == 2) {
-                            $calcReward += $rewardKat2;
-                            echo "<tr>
-                                    <td>$rewardKat2</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $ownLife <= 1) {
-                            $calcReward += $rewardKat2;
-                            echo "<tr>
-                                    <td>$rewardKat2</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($place >= 3 && $place <= 4) {
-                            $calcReward += $rewardKat2;
-                            echo "<tr>
-                                    <td>$rewardKat2</td>
-                                    <td>For being $place.</td>
-                                    <td><mark>$place</mark>$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own bot ranking</td>
-                                  </tr>";
-                        }
-
-
-                        // Kategorie 3 (-25)
-                        if ($chosenAction == 0 && $ownLife == 6) {
-                            $calcReward += $rewardKat3;
-                            echo "<tr>
-                                    <td>$rewardKat3</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $ownMines == 3) {
-                            $calcReward += $rewardKat3;
-                            echo "<tr>
-                                    <td>$rewardKat3</td>
-                                    <td>$place$ownLife<mark>$ownMines</mark>$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Bot has >=8 mines</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $enemyMines == 1) {
-                            $calcReward += $rewardKat3;
-                            echo "<tr>
-                                    <td>$rewardKat3</td>
-                                    <td>For $action while enemy has $enemyMines</td>
-                                    <td>$place$ownLife$ownMines$distanceBiggerFour<mark>$enemyMines</mark>$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Enemy has 1-3 mines</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $enemyLife > $ownLife) {
-                            $calcReward += $rewardKat3;
-                            echo "<tr>
-                                    <td>$rewardKat3</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health while enemy has " . (1 + $enemyLife) * 10 . "</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
-                                    <td>1. Own health, 2. Closest enemy's health</td>
-                                  </tr>";
-                        }
-
-                        if ($place == 2) {
-                            $calcReward += $rewardKat3;
-                            echo "<tr>
-                                    <td>$rewardKat3</td>
-                                    <td>For being Second</td>
-                                    <td><mark>$place</mark>$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own rank</td>
-                                  </tr>";
-                        }
-
-
-                        // Kategorie 4 (-2)
-                        if ($chosenAction == 0 && $ownLife == 5) {
-                            $calcReward += $rewardKat4;
-                            echo "<tr>
-                                    <td>$rewardKat4</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>" . (1 + $ownLife) * 10 . " health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $ownMines == 2) {
-                            $calcReward += $rewardKat4;
-                            echo "<tr>
-                                    <td>$rewardKat4</td>
-                                    <td>For $action with 4-7 owned mines</td>
-                                    <td>$place$ownLife<mark>$ownMines</mark>$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
-                                    <td>Bot's minecount (Abstract)</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $enemyLife == $ownLife) {
-                            $calcReward += $rewardKat4;
-                            echo "<tr>
-                                    <td>$rewardKat4</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health while enemy has (1+$enemyLife)*10</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
-                                    <td>1. Own health, 2. Closest enemy's health</td>
-                                  </tr>";
-                        }
-
-
-                        // Kategorie 5 (+13)
-                        if ($chosenAction == 0 && $ownLife >= 3 && $ownLife <= 4) {
-                            $calcReward += $rewardKat5;
-                            echo "<tr>
-                                    <td>$rewardKat5</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $ownMines <= 1) {
-                            $calcReward += $rewardKat5;
-                            echo "<tr>
-                                    <td>$rewardKat5</td>
-                                    <td>For $action with 0-3 Mines</td>
-                                    <td>$place$ownLife<mark>$ownMines</mark>$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own minecount (Abstract)</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $distanceBiggerFour == 0) {
-                            $calcReward += $rewardKat5;
-                            echo "<tr>
-                                    <td>$rewardKat5</td>
-                                    <td>For $action while closest enemy is closer than 4 cells</td>
-                                    <td>$place$ownLife$ownMines<mark>$distanceBiggerFour</mark>$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Closest enemy distance > 4 cells</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $enemyMines >= 2) {
-                            $calcReward += $rewardKat5;
-                            echo "<tr>
-                                    <td>$rewardKat5</td>
-                                    <td>For $action while enemy has >3 mines</td>
-                                    <td>$place$ownLife$ownMines$distanceBiggerFour<mark>$enemyMines</mark>$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Closest enemys minecount (Abstract)</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 2 && $enemyLife < $ownLife) {
-                            $calcReward += $rewardKat5;
-                            echo "<tr>
-                                    <td>$rewardKat5</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health while enemy has " . (1 + $enemyLife) * 10 . "</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines<mark>$enemyLife</mark>$timeRange$minTwoGold</td>
-                                    <td>1. Own health, 2. Closest enemy's health</td>
-                                  </tr>";
-                        }
-
-
-                        // Kategorie 6 (+50)
-                        if ($chosenAction == 0 && $ownLife <= 2) {
-                            $calcReward += $rewardKat6;
-                            echo "<tr>
-                                    <td>$rewardKat6</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-                        if ($chosenAction == 1 && $ownLife >= 3) {
-                            $calcReward += $rewardKat6;
-                            echo "<tr>
-                                    <td>$rewardKat6</td>
-                                    <td>For $action with " . (1 + $ownLife) * 10 . " health</td>
-                                    <td>$place<mark>$ownLife</mark>$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own health</td>
-                                  </tr>";
-                        }
-
-
-                        // Kategorie 7 (+75)
-                        if ($place == 1) {
-                            $calcReward += $rewardKat7;
-                            echo "<tr>
-                                    <td>$rewardKat7</td>
-                                    <td>For being first</td>
-                                    <td><mark>$place</mark>$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td>Own rank</td>
-                                  </tr>";
-                        }
-
-                        // timeRangeFaktor
-                        $calcReward2 = intval(($calcReward * (1 + ($timeRange * $timeRangeFactor))));
-
-                        echo "<tr>
-                                    <td>$calcReward</td>
-                                    <td>Total reward</td>
-                                    <td>$place$ownLife$ownMines$distanceBiggerFour$enemyMines$enemyLife$timeRange$minTwoGold</td>
-                                    <td></td>
-                                  </tr>";
-                        ?>
-                    </table>
-                </div>
-                <?php
-            }
+            <?php
+        }
         }
         ?>
     </div>
-    </body>
+</body>
 </html>

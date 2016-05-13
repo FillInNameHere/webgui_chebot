@@ -71,8 +71,44 @@ $states = $glREPO->getStates();
 
         <!-- Content -->
         <div class="container" style="margin-bottom: 0; margin-top: 10px; min-height: 30px; position: relative;">
-            <div>
-                <div id="data_form" style="float: left; width: 50%;">
+
+            <!-- Rechts: Statistics -->
+            <div class="jumbotron"
+                 style="width:39%; float: right; position: fixed; right: 10%; padding-top: 10px; padding-left: 10px">
+                <h1>Statistics</h1>
+
+                <h2>Winrate</h2>
+
+                <div style="width: auto">
+                    <?php
+                    $noOfWins = count($glREPO->findWinningGameLogs());
+                    $noOfGames = count($glREPO->findAllGameLogs());
+                    $noOfCrashed = count($glREPO->findByCrash(1));
+                    $noOfLoses = count($glREPO->findLostGameLogs()) - $noOfCrashed;
+                    $winrate = ($noOfWins / ($noOfGames - $noOfCrashed)) * 100;
+                    ?>
+                    <p>Total <?php echo $noOfGames ?> games</p>
+
+                    <p><?php echo $noOfCrashed ?> unfinished games</p>
+
+                    <p>And <?php echo $noOfLoses ?> losses</p>
+
+                    <p>Total <?php echo $noOfWins;
+                        if ($noOfWins > 1) {
+                            echo " wins";
+                        } else {
+                            echo " win";
+                        } ?></p>
+
+                    <p>Winrate: <?php echo number_format($winrate, 2) . "%" ?></p>
+
+                    <h3> Note: Crashed (Unfinished) games do not count as losses</h3>
+                </div>
+            </div>
+
+            <!-- Links: GameOverview Auswahl -->
+            <div style="float: left; width: 50%;">
+                <div id="data_form">
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                         <?php
                         foreach ($states as $name => $value) {
@@ -81,80 +117,60 @@ $states = $glREPO->getStates();
                     <?php
                     }
                         ?>
-                    </form>
-                    <br/>
+                    </form><br/>
                 </div>
 
-                <div style="float: left; width: 50%;">
-                    <!-- Links: GameOverview -->
-                    <?php
-                        $paramSet = false;
-                        $paramName = null;
-                        foreach ($states as $name => $value) {
-                            if (isset($_POST[$name])) {
-                                $paramSet = true;
-                                $paramName = $name;
-                            }
-                        }
 
-                        if ($paramSet) {
-                            $gls = $glREPO->getGLArray($paramName);
+                <!-- Links: GameOverview -->
+                <?php
+                $paramSet = false;
+                $paramName = null;
+                foreach ($states as $name => $value) {
+                    if (isset($_POST[$name])) {
+                        $paramSet = true;
+                        $paramName = $name;
+                    }
+                }
+
+                if ($paramSet) {
+                    $gls = $glREPO->getGLArray($paramName);
                     ?>
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered">
                             <thead bgcolor="#fff">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Date</th>
-                                    <th>URL</th>
-                                    <th>Win</th>
-                                    <th>Not Finished</th>
-                                    <th>Detailed Log</th>
-                                </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Date</th>
+                                <th>URL</th>
+                                <th>Win</th>
+                                <th>Not Finished</th>
+                                <th>Detailed Log</th>
+                            </tr>
                             </thead>
                             </tbody>
-                                <?php
-                                foreach ($gls as $gl) { ?>
-                                    <tr class="<?php if($gl->getWin() == 1){ echo "success";} elseif ($gl->getCrashed() == 1){echo "warning";} else { echo "danger"; }?>">
-                                        <td><b><?php echo $gl->getGameLogId(); ?></b></td>
-                                        <td><?php echo $gl->getStartingTime()?></td>
-                                        <td><a href="<?php echo $gl->getGameURL(); ?>" target="_blank"><?php echo $gl->getGameURL(); ?></a></td>
-                                        <td><?php echo $gl->getWin() . ""; ?></td>
-                                        <td><?php echo $gl->getCrashed() . ""; ?></td>
-                                        <td><a href="showDetailedLog.php?gameLogId=<?php echo $gl->getGameLogId() ?>" target="_blank">Show</td>
-                                    </tr>
-                                <?php } ?>
+                            <?php
+                            foreach ($gls as $gl) { ?>
+                                <tr class="<?php if ($gl->getWin() == 1) {
+                                    echo "success";
+                                } elseif ($gl->getCrashed() == 1) {
+                                    echo "warning";
+                                } else {
+                                    echo "danger";
+                                } ?>">
+                                    <td><b><?php echo $gl->getGameLogId(); ?></b></td>
+                                    <td><?php echo $gl->getStartingTime() ?></td>
+                                    <td><a href="<?php echo $gl->getGameURL(); ?>"
+                                           target="_blank"><?php echo $gl->getGameURL(); ?></a></td>
+                                    <td><?php echo $gl->getWin() . ""; ?></td>
+                                    <td><?php echo $gl->getCrashed() . ""; ?></td>
+                                    <td><a href="showDetailedLog.php?gameLogId=<?php echo $gl->getGameLogId() ?>"
+                                           target="_blank">Show</td>
+                                </tr>
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>
-                    <?php } ?>
-                </div>
-
-                <!-- Rechts: Statistics -->
-                <div class="jumbotron" style="width:39%; float: right; position: fixed; right: 10%; padding-top: 10px; padding-left: 10px">
-                    <h1>Statistics</h1>
-                    <h2>Winrate</h2>
-                    <div style="width: auto">
-                        <?php
-                        $noOfWins = count($glREPO->findWinningGameLogs());
-                        $noOfGames = count($glREPO->findAllGameLogs());
-                        $noOfCrashed = count($glREPO->findByCrash(1));
-                        $noOfLoses = count($glREPO->findLostGameLogs())-$noOfCrashed;
-                        $winrate = ($noOfWins / ($noOfGames - $noOfCrashed)) * 100;
-                        ?>
-                        <p>Total <?php echo $noOfGames ?> games</p>
-                        <p><?php echo $noOfCrashed ?> unfinished games</p>
-                        <p>And <?php echo $noOfLoses?> losses</p>
-                        <p>Total <?php echo $noOfWins;
-                            if ($noOfWins > 1) {
-                                echo " wins";
-                            } else {
-                                echo " win";
-                            } ?></p>
-                        <p>Winrate: <?php echo number_format($winrate, 2) . "%" ?></p>
-                        <h3> Note: Crashed (Unfinished) games do not count as losses</h3>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </body>

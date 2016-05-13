@@ -1,0 +1,88 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Christian
+ * Date: 26.04.2016
+ * Time: 23:14
+ */
+require_once __DIR__ . '/models/GameLog.php';
+require_once __DIR__ . '/repo/GameLogRepo.php';
+require_once __DIR__ . '/../sessionservices/SessionFactory.php';
+
+use vindinium\logservices\models\GameLog;
+use vindinium\logservices\repos\GameLogRepo;
+use vindinium\sessionservices\SessionFactory;
+
+//Session ...
+$sf = new SessionFactory();
+if (!$sf->validate("auth"))
+{
+    die('Access denied!');
+}
+
+//Get Data
+$glREPO = new GameLogRepo();
+
+$states = $glREPO->getStates();
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vindinium Project - Logs</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="data_form">
+            <h2>Choose:</h2>
+            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+                <?php
+                    foreach ($states as $name => $value) {
+                ?>
+                    <input type="submit" value="<?php echo $value; ?>" name="<?php echo $name; ?>"/>
+                <?php
+                    }
+                ?>
+                <span></span>
+            </form><br />
+        </div>
+        <?php
+            $paramSet = false;
+            $paramName = null;
+            foreach ($states as $name => $value)
+            {
+                if (isset($_POST[$name]))
+                {
+                    $paramSet = true;
+                    $paramName = $name;
+                }
+            }
+
+            if ($paramSet) {
+                $gls = $glREPO->getGLArray($paramName);
+        ?>
+        <table style="width:50%">
+            <tr>
+                <th>ID</th>
+                <th>URL</th>
+                <th>Win</th>
+            </tr>
+            <?php
+                foreach ($gls as $gl) { ?>
+            <tr>
+                <td><?php echo $gl->getGameLogId(); ?></td>
+                <td><a href="<?php echo $gl->getGameURL(); ?>" target="_blank"><?php echo $gl->getGameURL(); ?></a></td>
+                <td><?php echo $gl->getWin() . ""; ?></td>
+            </tr>
+            <?php } ?>
+        </table>
+        <?php } ?>
+    </body>
+</html>

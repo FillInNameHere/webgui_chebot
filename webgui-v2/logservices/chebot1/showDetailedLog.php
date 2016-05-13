@@ -69,57 +69,7 @@ if ($paramName === "first") {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <title>Vindinium Projekt - CHEBot v1.0 - Detailed Log - ID: <?php echo $gameLogId ?></title>
-        <!--<style>
-            A:link {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            A:visited {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            A:active {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            A:hover {
-                text-decoration: none;
-                color: #72c9dc;
-            }
-
-            table, th, td {
-                border: 1px solid #666;
-                border-collapse: collapse;
-            }
-
-            table {
-                background-color: #333;
-            }
-
-            th, td {
-                color: #999;
-                padding: 5px;
-            }
-        </style>-->
-        <style>
-            table, th, td {
-                border: 1px solid #666;
-                border-collapse: collapse;
-            }
-
-            table {
-                background-color: white;
-            }
-
-            th, td {
-                color: black;
-                padding: 5px;
-            }
-        </style>
+        <title>Vindinium Projekt - CHEBot v1.0 - Detailed Log - GameID: <?php echo $gameLogId ?></title>
     </head>
     <body bgcolor="#383b32">
         <!-- Navigation -->
@@ -155,7 +105,26 @@ if ($paramName === "first") {
             </div>
         </nav>
 
-        <div class="jumbotron">
+        <div style="float: right; position: fixed; top: 25px; padding-left: 5px; right: 5px;">
+            <iframe src="<?php echo $gameLog->getGameURL(); ?>" style="width: 1000px; height: 920px; border: none;"></iframe>
+            <div class="jumbotron">
+                <h1>Information</h1>
+                <p>
+                    <?php
+                    echo "The game was ";
+                    if ($gameLog->getWin() == 1) echo "won.<br />";
+                    else echo "lost.<br />";
+                    echo "The game did ";
+                    if ($gameLog->getCrashed() == 1) echo "not ";
+                    echo "end normally. ";
+                    if ($gameLog->getCrashed() == 1) echo "the last message was " . $gameLog->getEndMessage();
+                    ?>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="jumbotron" style="padding-left: 10px;">
             <h2><span style="">Gamelink: </span><a href="<?php echo $gameLog->getGameURL(); ?>" target="_blank"><?php echo $gameLog->getGameURL(); ?></a></h2>
         </div>
         <div id="data_form">
@@ -169,101 +138,92 @@ if ($paramName === "first") {
                     <?php
                 }
                 ?>
-                <span></span>
-            </form>
-        </div>
+            </form><br />
 
-        <div>
             <?php
             if ($paramName === 'all') {
                 ?>
-                <div style="float: left; width: 50%;">
-                    <table style="width: 100%">
-                        <tr>
-                            <th>ID</th>
-                            <th>Turn</th>
-                            <th>Best Action</th>
-                            <th>Chosen Action</th>
-                            <th>Old Q-Value</th>
-                            <th>New Q-Value</th>
-                            <th>Reward</th>
-                            <th>State</th>
-                        </tr>
-                        <?php
-                        foreach ($gameSteps as $gs) { ?>
+                <div style="float: left; width: 47%;">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <thead bgcolor="#fff">
                             <tr>
-                                <td><?php echo $gs->getGameStepId(); ?></td>
-                                <td><?php echo $gs->getTurn(); ?></td>
-                                <?php
-                                    if ($gs->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                                    elseif ($gs->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                                    elseif ($gs->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                                    else echo "<td>Continue"; ?></td>
-                                <?php if ($gs->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                                    elseif ($gs->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                                    elseif ($gs->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                                    else echo "<td>Continue"; ?></td>
-                                <td><?php echo $gs->getOldQval() ?></td>
-                                <td><?php echo $gs->getNewQval() ?></td>
-                                <td><?php echo $gs->getReward() ?></td>
-                                <td><?php echo $gs->getStateStateId() ?></td>
+                                <th>ID</th>
+                                <th>Turn</th>
+                                <th>Best Action</th>
+                                <th>Chosen Action</th>
+                                <th>Old Q-Value</th>
+                                <th>New Q-Value</th>
+                                <th>Reward</th>
+                                <th>State</th>
                             </tr>
-                        <?php } ?>
-                    </table>
-                </div>
+                            </thead>
+                            </tbody>
+                                </tr>
+                                <?php
+                                foreach ($gameSteps as $gs) { ?>
+                                    <tr>
+                                        <td><?php echo $gs->getGameStepId(); ?></td>
+                                        <td><?php echo $gs->getTurn(); ?></td>
+                                        <?php
+                                            if ($gs->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                                            elseif ($gs->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                                            elseif ($gs->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                                            else echo "<td>Continue"; ?></td>
+                                        <?php if ($gs->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                                            elseif ($gs->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                                            elseif ($gs->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                                            else echo "<td>Continue"; ?></td>
+                                        <td><?php echo $gs->getOldQval() ?></td>
+                                        <td><?php echo $gs->getNewQval() ?></td>
+                                        <td><?php echo $gs->getReward() ?></td>
+                                        <td><?php echo $gs->getStateStateId() ?></td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
                 <?php
-            }
+            }?></div>
+            <?php
             if ($paramName != "all") {
                 $currentStep = $gameSteps[$currentStepIndex];
                 ?>
-                <div style="float: left;">
-                    <table style="width: 100%">
-                        <tr>
-                            <th>ID</th>
-                            <th>Turn</th>
-                            <th>Best Action</th>
-                            <th>Chosen Action</th>
-                            <th>Old Q-Value</th>
-                            <th>New Q-Value</th>
-                            <th>Reward</th>
-                            <th>State</th>
-                        </tr>
-                        <tr>
-                            <td><?php echo $currentStep->getGameStepId(); ?></td>
-                            <td><?php echo $currentStep->getTurn(); ?></td>
-                            <?php
-                                if ($currentStep->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                                elseif ($currentStep->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                                elseif ($currentStep->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                                else echo "Continue"; ?></td>
-                            <?php if ($currentStep->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
-                                elseif ($currentStep->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
-                                elseif ($currentStep->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-                                else echo "<td>Continue"; ?></td>
-                            <td><?php echo $currentStep->getOldQval() ?></td>
-                            <td><?php echo $currentStep->getNewQval() ?></td>
-                            <td><?php echo $currentStep->getReward() ?></td>
-                            <td><?php echo $currentStep->getStateStateId() ?></td>
-                        </tr>
+            <div style="float: left; width: 47%;">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead bgcolor="#fff">
+                            <tr>
+                                <th>ID</th>
+                                <th>Turn</th>
+                                <th>Best Action</th>
+                                <th>Chosen Action</th>
+                                <th>Old Q-Value</th>
+                                <th>New Q-Value</th>
+                                <th>Reward</th>
+                                <th>State</th>
+                            </tr>
+                        </thead>
+                        </tbody>
+                            <tr>
+                                <td><?php echo $currentStep->getGameStepId(); ?></td>
+                                <td><?php echo $currentStep->getTurn(); ?></td>
+                                <?php
+                                    if ($currentStep->getBestActionThen() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                                    elseif ($currentStep->getBestActionThen() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                                    elseif ($currentStep->getBestActionThen() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                                    else echo "Continue"; ?></td>
+                                <?php if ($currentStep->getChosenAction() == 0) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
+                                    elseif ($currentStep->getChosenAction() == 1) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
+                                    elseif ($currentStep->getChosenAction() == 2) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
+                                    else echo "<td>Continue"; ?></td>
+                                <td><?php echo $currentStep->getOldQval() ?></td>
+                                <td><?php echo $currentStep->getNewQval() ?></td>
+                                <td><?php echo $currentStep->getReward() ?></td>
+                                <td><?php echo $currentStep->getStateStateId() ?></td>
+                            </tr>
+                        </tbody>
                     </table>
-                </div>
-
-                <div style="float: right; position: fixed; padding-top: 10px; padding-left: 10px; right: 10%;">
-                    <iframe src="<?php echo $gameLog->getGameURL(); ?>" style="width: 1000px; height: 920px; border: none;"></iframe>
-                    <div class="jumbotron">
-                        <h1>Information</h1>
-                        <p>
-                            <?php
-                            echo "The game was ";
-                            if ($gameLog->getWin() == 1) echo "won.<br />";
-                            else echo "lost.<br />";
-                            echo "The game did ";
-                            if ($gameLog->getCrashed() == 1) echo "not ";
-                            echo "end normally. ";
-                            if ($gameLog->getCrashed() == 1) echo "the last message was " . $gameLog->getEndMessage();
-                            ?>
-                        </p>
-                    </div>
                 </div>
 
                 <?php if ($currentStep->getChosenAction() != 3) { ?>

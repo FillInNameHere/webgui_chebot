@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '../../models/GameLog.php';
-require_once __DIR__ . '../../repo/GameLogRepo.php';
-require_once __DIR__ . '../../../sessionservices/SessionFactory.php';
+require_once __DIR__ . '/../../sessionservices/SessionFactory.php';
+require_once __DIR__ . '/models/Vars.php';
+require_once __DIR__ . '/repo/VarRepo.php';
 
-use vindinium\logservices\models\GameLog;
-use vindinium\logservices\repos\GameLogRepo;
+use vindinium\config\models\Vars;
+use vindinium\config\repo\VarRepo;
 use vindinium\sessionservices\SessionFactory;
 
 //Session ...
@@ -13,10 +13,18 @@ if (!$sf->validate("auth")) {
     die('Access denied!');
 }
 
-//Get Data
-$glREPO = new GameLogRepo();
+$varREPO = new VarRepo();
 
-$states = $glREPO->getStates();
+if (isset($_POST["submit"])) {
+    $newVars = new Vars();
+    foreach ($newVars as $key => $value) {
+        $newVars->$key = $_POST[$key];
+    }
+    $newVars->refactor();
+    $varREPO->setVars($newVars);
+}
+
+$vars = $varREPO->getVars();
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +41,7 @@ $states = $glREPO->getStates();
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <title>Vindinium Projekt - Config</title>
+        <title>Vindinium Projekt - CHEBot v1.0 - Config</title>
     </head>
     <body style="background-color:#3277b3; overflow-y: scroll;">
         <!-- Navigation -->
@@ -68,5 +76,20 @@ $states = $glREPO->getStates();
                 </div><!-- navbar-collapse -->
             </div>
         </nav>
+
+	<div class="container" style="width: 50%; margin: auto; margin-top: 10px;">
+            <div class="jumbotron">
+	        <div id="data_form">
+                    <h2>Configuration</h2><br />
+	            <form action="/logservices/chebot1/config.php" method="POST">
+                        <?php foreach ($vars as $key => $value) { ?>
+                        <label><?php echo $key; ?></label>
+                        <input type="text" name="<?php echo $key; ?>" value="<?php echo $value; ?>"/><br />
+                        <?php } ?><br />
+			<button type="submit" name="submit" class="btn btn-default" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Save &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>
+	            </form><br/>
+                </div>
+            </div>
+     	</div>
     </body>
 </html>

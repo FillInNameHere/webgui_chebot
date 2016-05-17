@@ -2,10 +2,14 @@
 require_once __DIR__ . '../../models/GameLog.php';
 require_once __DIR__ . '../../repo/GameLogRepo.php';
 require_once __DIR__ . '../../../sessionservices/SessionFactory.php';
+require_once __DIR__ . '../../repo/StateRepo.php';
+
 
 use vindinium\logservices\models\GameLog;
 use vindinium\logservices\repos\GameLogRepo;
 use vindinium\sessionservices\SessionFactory;
+use vindinium\logservices\repos\StateRepo;
+
 
 //Session ...
 $sf = new SessionFactory();
@@ -15,8 +19,10 @@ if (!$sf->validate("auth")) {
 
 //Get Data
 $glREPO = new GameLogRepo();
+$stateREPO = new StateRepo();
 
 $states = $glREPO->getStates();
+$learnedStates = $stateREPO->findAllStates();
 ?>
 
 <!DOCTYPE html>
@@ -102,6 +108,8 @@ $states = $glREPO->getStates();
 
                     <p>Winrate: <?php echo number_format($winrate, 2) . "%" ?></p>
 
+                    <p>Learned States: <?php echo number_format(count($learnedStates), 0, ".", ",");?> / 102,400</p>
+
                     <h3> Note: Crashed (Unfinished) games do not count as losses</h3>
                 </div>
             </div>
@@ -130,6 +138,11 @@ $states = $glREPO->getStates();
                         $paramSet = true;
                         $paramName = $name;
                     }
+                }
+
+                if(!$paramSet){
+                    $paramName = 'last';
+                    $paramSet = true;
                 }
 
                 if ($paramSet) {

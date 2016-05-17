@@ -83,8 +83,6 @@ $learnedStates = $stateREPO->findAllStates();
                  style="width:39%; float: right; position: fixed; right: 10%; padding-top: 10px; padding-left: 10px">
                 <h1>Statistics</h1>
 
-                <h2>Winrate</h2>
-
                 <div style="width: auto">
                     <?php
                     $noOfWins = count($glREPO->findWinningGameLogs());
@@ -105,11 +103,35 @@ $learnedStates = $stateREPO->findAllStates();
                         } else {
                             echo " win";
                         } ?></p>
-
+						
                     <p>Winrate: <?php echo number_format($winrate, 2) . "%" ?></p>
 
                     <p>Learned States: <?php echo number_format(count($learnedStates), 0, ".", ",");?> / 102,400</p>
+					
+					<?php 
 
+					$percent = round((count($learnedStates)/102400)*100);
+					
+					if(count($learnedStates) < 25600){ ?>
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
+							<?php echo $percent ?>%
+						</div>
+					</div>
+					<?php } elseif (count($learnedStates) >= 25601 && count($learnedStates) < 51200) { ?>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
+							<?php echo $percent ?>%
+						</div>
+					</div>
+					<?php } else { ?>
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
+							<?php echo $percent ?>%
+						</div>
+					</div>
+					<?php } ?>
+					
                     <h3> Note: Crashed (Unfinished) games do not count as losses</h3>
                 </div>
             </div>

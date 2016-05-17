@@ -7,10 +7,12 @@
  */
 require_once __DIR__ . '/models/GameLog.php';
 require_once __DIR__ . '/repo/GameLogRepo.php';
+require_once __DIR__ . '/repo/StateRepo.php';
 require_once __DIR__ . '/../sessionservices/SessionFactory.php';
 
 use vindinium\logservices\models\GameLog;
 use vindinium\logservices\repos\GameLogRepo;
+use vindinium\logservices\repos\StateRepo;
 use vindinium\sessionservices\SessionFactory;
 
 //Session ...
@@ -21,8 +23,10 @@ if (!$sf->validate("auth")) {
 
 //Get Data
 $glREPO = new GameLogRepo();
+$stateREPO = new StateRepo();
 
 $states = $glREPO->getStates();
+$learnedStates = $stateREPO->findAllStates();
 ?>
 <!DOCTYPE html>
 <html>
@@ -117,6 +121,7 @@ $states = $glREPO->getStates();
                     echo " win";
                 } ?></p>
             <p>Winrate: <?php echo number_format($winrate, 2) . "%" ?></p>
+            <p>Learned States: <?php echo count($learnedStates);?> / 102.400</p>
             <h3> Note: Crashed (Unfinished) games do not count as losses</h3>
         </div>
     </div>

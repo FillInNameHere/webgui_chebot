@@ -69,7 +69,7 @@ if ($paramName === "first") {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <title>Vindinium Projekt - CHEBot v2.0 - Detailed Log - GameID: <?php echo $gameLogId ?></title>
+    <title>Vindinium Projekt - CHEBot 2 - Detailed Log - GameID: <?php echo $gameLogId ?></title>
 </head>
 <body bgcolor="#383b32">
 	<!-- Navigation -->
@@ -83,7 +83,7 @@ if ($paramName === "first") {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="../chebot2/">CHEBot v2.0</a>
+				<a class="navbar-brand" href="../chebot2/">CHEBot 2</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,8 +96,9 @@ if ($paramName === "first") {
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Bot-Version <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="../chebot1/">CHEBot v1.0</a></li>
-							<li><a href="../chebot2/">CHEBot v2.0</a></li>
+							<li><a href="../chebot1/">CHEBot 1</a></li>
+							<li><a href="../chebot2/">CHEBot 2</a></li>
+							<li><a href="../chebot3/">CHEBot 3</a></li>
 						</ul>
 					</li>
 				</ul>

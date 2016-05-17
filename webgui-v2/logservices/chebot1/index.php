@@ -94,7 +94,7 @@ $learnedStates = $stateREPO->findAllStates();
             ?>
             <p>Total <?php echo $noOfGames ?> games</p>
 
-            <p><?php echo $noOfCrashed ?> unfinished games</p>
+            <p><?php echo $noOfCrashed ?> crashed games</p>
 
             <p>And <?php echo $noOfLoses ?> losses</p>
 
@@ -105,7 +105,41 @@ $learnedStates = $stateREPO->findAllStates();
                     echo " win";
                 } ?></p>
 
+
+	    <?php 
+		$percentlost = round(($noOfLoses / $noOfGames) * 100);
+		$percentcrashed = round(($noOfCrashed / $noOfGames) * 100);
+                $percentwin = 100 - $percentlost - $percentcrashed;
+	    ?>
+	    <div class="progress">
+	        <div class="progress-bar progress-bar-success" role="progressbar" style="width: <?php echo $percentwin; ?>%;">
+	        w: <?php echo $percentwin; ?>%
+                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width: <?php echo $percentlost; ?>%;">
+	        l: <?php echo $percentlost; ?>%
+                </div>
+                <div class="progress-bar progress-bar-warning" role="progressbar" style="width: <?php echo $percentcrashed; ?>%;">
+	        c: <?php echo $percentcrashed; ?>%
+                </div>
+	    </div>
+
+            <h6><b><span style="top: -10px;">*Note: Crashed games do not count as losses.</span></b></h6>
+
             <p>Winrate: <?php echo number_format($winrate, 2) . "%" ?></p>
+	    
+	    <?php  
+	        $roundwinratetwo = number_format($winrate, 2);
+                $roundlostratetwo = number_format(100 - $winrate, 2);
+            ?>
+
+            <div class="progress">
+	        <div class="progress-bar progress-bar-success" role="progressbar" style="width: <?php echo $roundwinratetwo; ?>%;">
+	        winrate: <?php echo $roundwinratetwo; ?>%
+                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width: <?php echo $roundlostratetwo; ?>%;">
+	        l: <?php echo $roundlostratetwo; ?>%
+                </div>
+	    </div>
 
             <p>Learned States: <?php echo number_format(count($learnedStates), 0, ".", ",");?> / 102,400</p>
 					
@@ -115,24 +149,22 @@ $learnedStates = $stateREPO->findAllStates();
 					if(count($learnedStates) < 25600){ ?>
 					<div class="progress">
 						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
-							<?php echo $percent ?>%
+							L. S.: <?php echo $percent ?>%
 						</div>
 					</div>
 					<?php } elseif (count($learnedStates) >= 25601 && count($learnedStates) < 51200) { ?>
 					<div class="progress">
 						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
-							<?php echo $percent ?>%
+							L. S.: <?php echo $percent ?>%
 						</div>
 					</div>
 					<?php } else { ?>
 					<div class="progress">
 						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
-							<?php echo $percent ?>%
+							L. S.: <?php echo $percent ?>%
 						</div>
 					</div>
 					<?php } ?>
-					
-            <h3> Note: Crashed (Unfinished) games do not count as losses</h3>
         </div>
     </div>
 

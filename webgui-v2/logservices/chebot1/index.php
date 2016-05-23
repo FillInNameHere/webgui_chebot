@@ -69,6 +69,7 @@ $learnedStates = $stateREPO->findAllStates();
                         <li><a href="../chebot1/">CHEBot 1</a></li>
                         <li><a href="../chebot2/">CHEBot 2</a></li>
                         <li><a href="../chebot3/">CHEBot 3</a></li>
+			<li><a href="../chebot4/">CHEBot 4</a></li>
                     </ul>
                 </li>
             </ul>

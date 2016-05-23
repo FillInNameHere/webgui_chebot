@@ -71,6 +71,7 @@ $vars = $varREPO->getVars();
                                 <li><a href="../chebot1/">CHEBot 1</a></li>
                                 <li><a href="../chebot2/">CHEBot 2</a></li>
                                 <li><a href="../chebot3/">CHEBot 3</a></li>
+				<li><a href="../chebot4/">CHEBot 4</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -82,7 +83,7 @@ $vars = $varREPO->getVars();
             <div class="jumbotron">
 	        <div id="data_form">
                     <h2>Configuration</h2><br />
-	            <form action="/logservices/chebot2/config.php" method="POST">
+	            <form action="/logservices/chebot3/config.php" method="POST">
                         <?php foreach ($vars as $key => $value) { ?>
                         <label><?php echo $key; ?></label>
                         <input type="text" name="<?php echo $key; ?>" value="<?php echo $value; ?>"/><br />

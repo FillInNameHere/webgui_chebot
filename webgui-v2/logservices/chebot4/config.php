@@ -41,7 +41,7 @@ $vars = $varREPO->getVars();
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <title>Vindinium Projekt - CHEBot 1 - Config</title>
+        <title>Vindinium Projekt - CHEBot 4 - Config</title>
     </head>
     <body style="background-color:#3277b3; overflow-y: scroll;">
         <!-- Navigation -->
@@ -55,14 +55,14 @@ $vars = $varREPO->getVars();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../chebot1/">CHEBot 1</a>
+                    <a class="navbar-brand" href="../chebot4/">CHEBot 4</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="../chebot1/">GameOverview</a></li>
-                        <li><a href="../chebot1/config.php">Config</a></li>
+                        <li><a href="../chebot4/">GameOverview</a></li>
+                        <li><a href="../chebot4/config.php">Config</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -83,7 +83,7 @@ $vars = $varREPO->getVars();
             <div class="jumbotron">
 	        <div id="data_form">
                     <h2>Configuration</h2><br />
-	            <form action="/logservices/chebot1/config.php" method="POST">
+	            <form action="/logservices/chebot4/config.php" method="POST">
                         <?php foreach ($vars as $key => $value) { ?>
                         <label><?php echo $key; ?></label>
                         <input type="text" name="<?php echo $key; ?>" value="<?php echo $value; ?>"/><br />

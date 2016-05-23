@@ -39,7 +39,7 @@ $learnedStates = $stateREPO->findAllStates();
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <title>Vindinium Projekt - CHEBot 3 - GameOverview</title>
+        <title>Vindinium Projekt - CHEBot 4 - GameOverview</title>
     </head>
     <body style="background-color:#3277b3; overflow-y: scroll;">
         <!-- Navigation -->
@@ -53,14 +53,14 @@ $learnedStates = $stateREPO->findAllStates();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../chebot3/">CHEBot 3</a>
+                    <a class="navbar-brand" href="../chebot4/">CHEBot 4</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="../chebot3/">GameOverview</a></li>
-                        <li><a href="../chebot3/config.php">Config</a></li>
+                        <li><a href="../chebot4/">GameOverview</a></li>
+                        <li><a href="../chebot4/config.php">Config</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -69,7 +69,7 @@ $learnedStates = $stateREPO->findAllStates();
                                 <li><a href="../chebot1/">CHEBot 1</a></li>
                                 <li><a href="../chebot2/">CHEBot 2</a></li>
                                 <li><a href="../chebot3/">CHEBot 3</a></li>
-				<li><a href="../chebot4/">CHEBot 4</a></li>
+								<li><a href="../chebot4/">CHEBot 4</a></li>
                             </ul>
                         </li>
                     </ul>

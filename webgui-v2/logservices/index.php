@@ -35,7 +35,7 @@
             <!-- CHEBot 1 -->
             <div class="col-lg-3 col-md-4">
                 <div class="thumbnail">
-                    <a href="chebot1/index.php"><img src="get/chebot1.png" alt="CHEBot 1"></a>
+                    <a href="chebot1/"><img src="get/chebot1.png" alt="CHEBot 1"></a>
                     <div class="caption">
                         <h3 class="pager">CHEBot 1</h3>
                         <p class="pager"><a href="chebot1/" class="btn btn-primary" role="button">Go to CHEBot 1</a></p>
@@ -46,7 +46,7 @@
             <!-- CHEBot 2 -->
             <div class="col-lg-3 col-md-4">
                 <div class="thumbnail">
-                    <a href="chebot2/index.php"><img src="get/chebot2.png" alt="CHEBot 2"></a>
+                    <a href="chebot2/"><img src="get/chebot2.png" alt="CHEBot 2"></a>
                     <div class="caption">
                         <h3 class="pager">CHEBot 2</h3>
                         <p class="pager"><a href="chebot2/" class="btn btn-primary" role="button">Go to CHEBot 2</a></p>
@@ -62,7 +62,7 @@
 	    <!-- CHEBot 3 -->
             <div class="col-lg-3 col-md-4">
                 <div class="thumbnail">
-                    <a href="chebot3/index.php"><img src="get/chebot3.png" alt="CHEBot 3"></a>
+                    <a href="chebot3/"><img src="get/chebot3.png" alt="CHEBot 3"></a>
                     <div class="caption">
                         <h3 class="pager">CHEBot 3</h3>
                         <p class="pager"><a href="chebot3/" class="btn btn-primary" role="button">Go to CHEBot 3</a></p>
@@ -70,7 +70,17 @@
                 </div>
             </div>
 		
-            <div class="col-lg-3 col-md-4">&nbsp;</div>
+            <!-- CHEBot 4 -->
+            <div class="col-lg-3 col-md-4">
+                <div class="thumbnail">
+                    <a href="chebot4/"><img src="get/chebot4.png" alt="CHEBot 4"></a>
+                    <div class="caption">
+                        <h3 class="pager">CHEBot 4</h3>
+                        <p class="pager"><a href="chebot4/" class="btn btn-primary" role="button">Go to CHEBot 4</a></p>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-lg-3 col-md-4">&nbsp;</div>
 	</div>
     </body>

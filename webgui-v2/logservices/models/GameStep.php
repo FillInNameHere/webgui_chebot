@@ -52,6 +52,17 @@ Class GameStep
      */
     protected $oldQval;
 
+    
+    /**
+     * @Column(type="integer")
+     */
+    protected $lifeDiff;
+
+    /**
+     * @Column(type="integer")
+     */
+    protected $mineDiff;
+
     /**
      * @return mixed
      */
@@ -186,6 +197,22 @@ Class GameStep
     public function setTurn($turn)
     {
         $this->turn = $turn;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMineDiff()
+    {
+        return $this->mineDiff;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLifeDiff()
+    {
+        return $this->lifeDiff;
     }
 
 }

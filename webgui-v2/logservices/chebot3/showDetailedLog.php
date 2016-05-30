@@ -258,14 +258,14 @@ if ($paramName === "first") {
                         if ($gs->getBestActionThen() == 1) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
                         elseif ($gs->getBestActionThen() == 2) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
                         elseif ($gs->getBestActionThen() == 3) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-						elseif ($gs->getBestActionThen() == 4) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine!";}
-						elseif ($gs->getBestActionThen() == 5) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight!";}
+						elseif ($gs->getBestActionThen() == 4) {echo "<td bgcolor=\"#22aeff\"><img src=\"../get/mine_enemy.png\" height=\"16px\" width=\"10px\" />"; echo "&nbsp; Mine!";}
+						elseif ($gs->getBestActionThen() == 5) {echo "<td bgcolor=\"#00ec3d\"><img src=\"../get/fight_top.png\" height=\"16px\" width=\"14px\" />"; echo "&nbsp; Fight!";}
                         else echo "<td>Continue"; ?></td>
                         <?php if ($gs->getChosenAction() == 1) {echo "<td bgcolor=\"#ffea57\"><img src=\"../get/tavern.png\" height=\"16px\" width=\"12px\" />"; echo "&nbsp; Tavern";}
                         elseif ($gs->getChosenAction() == 2) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine";}
                         elseif ($gs->getChosenAction() == 3) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight";}
-						elseif ($gs->getChosenAction() == 4) {echo "<td bgcolor=\"#c49441\"><img src=\"../get/mine.png\" height=\"16px\" width=\"8px\" />"; echo "&nbsp; Mine!";}
-						elseif ($gs->getChosenAction() == 5) {echo "<td bgcolor=\"#ff6b6a\"><img src=\"../get/fight.png\" height=\"16px\" width=\"16px\" />"; echo "&nbsp; Fight!";}
+						elseif ($gs->getChosenAction() == 4) {echo "<td bgcolor=\"#22aeff\"><img src=\"../get/mine_enemy.png\" height=\"16px\" width=\"10px\" />"; echo "&nbsp; Mine!";}
+						elseif ($gs->getChosenAction() == 5) {echo "<td bgcolor=\"#00ec3d\"><img src=\"../get/fight_top.png\" height=\"16px\" width=\"14px\" />"; echo "&nbsp; Fight!";}
                         else echo "<td>Continue"; ?></td>
                         <td><?php echo $gs->getOldQval() ?></td>
                         <td><?php echo $gs->getNewQval() ?></td>

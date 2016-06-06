@@ -16,8 +16,8 @@ if (!$sf->validate("auth")) {
 }
 
 //Get Data
-$glREPO = new GameLogRepo();
-$gsREPO = new GameStepRepo();
+$glREPO = new GameLogRepo('vindinium3');
+$gsREPO = new GameStepRepo('vindinium3');
 $states = $gsREPO->getStates();
 
 if (isset($_GET["gameLogId"]) && !empty($_GET["gameLogId"])) $gameLogId = $_GET["gameLogId"];

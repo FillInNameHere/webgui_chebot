@@ -16,7 +16,7 @@ use vindinium\config\models\Vars;
 class VarRepo
 {
     //private $path = __DIR__ . "/file/vars.vfv";
-    private $path = '/home/crambow/projects/projects/checlient/vindinium-client-1.0.0/target/file/vars.vfv';
+    private $path = '/home/crambow/projects/projects/checlient3/vindinium-client-1.0.0/target/file/vars.vfv';
 
     public function getVars() {
         $fileString = file_get_contents($this->path);

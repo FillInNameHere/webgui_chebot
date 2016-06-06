@@ -18,8 +18,8 @@ if (!$sf->validate("auth")) {
 }
 
 //Get Data
-$glREPO = new GameLogRepo();
-$stateREPO = new StateRepo();
+$glREPO = new GameLogRepo('vindinium2');
+$stateREPO = new StateRepo('vindinium2');
 
 $states = $glREPO->getStates();
 $learnedStates = $stateREPO->findAllStates();

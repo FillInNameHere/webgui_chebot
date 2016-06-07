@@ -142,18 +142,18 @@ $learnedStates = $stateREPO->findAllStates();
                 </div>
 	    </div>
 
-            <p>Learned States: <?php echo number_format(count($learnedStates), 0, ".", ",");?> / 102,400</p>
+            <p>Learned States: <?php echo number_format(count($learnedStates), 0, ".", ",");?> / 800,000,000</p>
 					
 					<?php 
-					$percent = round((count($learnedStates)/102400)*100);
+					$percent = round((count($learnedStates)/800000000)*100);
 					
-					if(count($learnedStates) < 25600){ ?>
+					if(count($learnedStates) < 200000000){ ?>
 					<div class="progress">
 						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
 							L. S.: <?php echo $percent ?>%
 						</div>
 					</div>
-					<?php } elseif (count($learnedStates) >= 25601 && count($learnedStates) < 51200) { ?>
+					<?php } elseif (count($learnedStates) >= 200000001 && count($learnedStates) < 400000000) { ?>
 					<div class="progress">
 						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<?php echo $percent ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percent ?>%">
 							L. S.: <?php echo $percent ?>%
